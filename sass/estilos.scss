@@ -1,0 +1,1139 @@
+@import "_base.scss";
+
+@mixin sizes ($minwidth, $width, $height ) {
+    min-width: $minwidth;
+    width: $width;
+    height: $height;
+}
+.conteiner{
+    @include sizes(320px,100% ,auto);
+}
+body{
+    background-color: $color2;
+}
+header{
+    @include sizes(320px, 100%, 145px);
+    background-color:$color2;
+    display: grid;
+
+    .envios{
+        @include sizes(320px, 100%, 20px);
+        background-color: $color5;
+        p{
+            color: $color2;
+            font-family: $font1;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+    .nav-1{
+        @include sizes(300px ,100% , 30px);
+        border: none;
+        margin-right: 20px;
+        text-align: right;
+        font-family: $font1; 
+        :hover{
+            color: $color1}
+
+        li{
+            text-transform:capitalize; 
+            display: inline-block; 
+            border-spacing: 15px; 
+            text-align: center;
+
+            a{
+                color: #000; 
+                font-size: 15px;
+                text-decoration: none; 
+                margin: 5px; 
+                border-left: 5px;
+            }
+        }
+    }
+    .logo{
+        height: 80px;
+        color:$color5;
+        font-family: $font1;
+        font-weight: bold;
+        font-size: 50px;
+        letter-spacing: 25px; 
+        text-align: left; 
+        text-transform: 
+        uppercase; 
+        margin-left: 1px;
+        display: inline-block;
+        padding-left: 20px;
+        transform: translateY(-10px);
+        
+        :hover{
+            color: $color1}    
+    }
+    .nav-2{
+        height:auto;
+        width: 100%;
+        border: none;
+        padding-left: 30px;
+        text-align: center;
+        display: inline-block;
+        font-family: $font1 ;  
+        transform: translateY(-15px);
+
+        :hover{
+            color: $color1;
+        }
+        li{
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            display: inline-block; 
+            border-spacing: 15px; 
+            text-align: center;
+
+            a{ 
+                color: #000; 
+                text-decoration: none;
+                font-size: 15px; 
+                margin: 5px; 
+                border-left: 5px;
+            }
+        }
+    }
+}
+.main{
+    @include sizes(320px, 100%, auto);
+    max-height: 600px;
+
+    .rowmain{
+        @include sizes(320px, 100%, auto);
+        max-height: 600px;
+        margin: 40px;
+        .carousel{
+            margin: 40px;
+        }
+        .carousel-inner img{
+            max-height: 320px;
+            min-width: 320px;
+            width: 100%;
+            text-align: center;
+        }
+    }   
+}
+aside{
+    @include sizes(300px, 100%, auto);
+    font-family: $font1;
+    text-align: justify;
+    background-color: $color2;
+    margin-top: 10px;
+
+    h2{
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    p{
+        padding: 10px;
+    }
+}
+.caja{
+    min-height: 700px;
+    height: auto;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 70px;
+    grid-column-gap: 5px;
+    padding-left: 10px;
+    padding-bottom: 100px;
+
+    a{
+        text-decoration: none;
+        font-family: $font1;
+        font-weight: bold;
+        text-transform: uppercase;  
+        display: grid;  
+        text-align: center;
+        min-width: 100px;
+        font-size: 20px;
+        color: $color5;
+    }
+    :hover{
+        color: $color1;
+    }
+    .img-fluid{
+        @include sizes(80px, 90%, 100%);
+        min-height: 100px;
+    }
+}
+.tabladetalles{
+    @include sizes(320px,100% ,auto );
+    font-family: $font1;
+    padding: 5px;
+
+    .tablatalles{
+        padding: 5px;
+
+        h2{
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+        h3{
+            text-transform:capitalize;
+            font-size: 20px;
+        }
+        .table{
+            @include sizes(290px,100%,auto);
+            margin-right: 10px;
+            th{
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+            td{
+                font-size: 13px;
+            }
+            .zona{
+                text-transform:capitalize;
+                font-size: 13px;
+            }
+        }
+    }
+}
+.productospag{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 10px;
+    background: linear-gradient(120deg, $color2 , $color4);
+
+    .asideproductos{
+        @include sizes(50px, 100%, auto);
+        li{
+            background-color: $color2;
+        }
+        a{
+            color: $color5;
+            font-family: $font1;
+            font-size: 12px;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        :hover{
+            color: $color6;
+        }
+        span{
+            background-color: $color6;
+            color: $color5;
+            size: 1px;
+            margin: 0px;
+            padding: 4px;
+        }
+    }
+    .cuerpoprod{
+        @include sizes(120px, 95%, auto );
+
+        section{
+            @include sizes(100px, 100%,auto );
+
+            h2{
+            @include sizes(100px, 100%,auto );
+            font-family: $font1;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding:10px;
+            }   
+        }
+        .galeriasw{
+            @include sizes (150px, 90%, auto);
+            font-family: $font1;
+            font-size: 15px;
+            text-transform: uppercase;
+            display: grid;
+            grid-row-gap: 10px;
+
+            .card{
+                
+                img{
+                    @include sizes(40px, 100%, auto);
+                }
+                h4{
+                    font-size: 18px;
+                }
+                a{
+                    @include sizes(60px, 100%, auto);
+                    font-size: smaller;
+                    margin: 0px;
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+.mainregistrarse{
+    @include sizes (320px, 100%, auto);
+    font-family: $font1;
+    padding: 10px;
+    h2{
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    h3{
+        font-size: 20px;
+    }
+}
+.comunidad{
+    @include sizes(280px, 100%, auto);
+    font-family: $font1;
+    background: linear-gradient(180deg, $color1 , $color6);
+    border-right: 10px;
+    border-left: 10px;
+
+    form{
+        padding: 20px;
+        font-size: 20px;
+        text-transform: capitalize;
+
+        .form-check{
+            display: grid;
+            grid-template-rows: repeat(25px);
+            p{
+                transform: translate(-40px,0);
+            }
+        }
+        .minus{
+            text-transform: none;
+        }
+        .newslet{
+            display: grid;
+            grid-template-columns: 50px, 50px;
+        }
+        button{
+            margin-top: 10px;
+        }
+    }
+}
+.ingresar{
+    @include sizes(320px, 100%, auto);
+    font-family: $font1;
+    background: linear-gradient(180deg, $color1 , $color6);
+    padding: 5px;
+    .bienve{
+        font-size: 40px;
+        text-transform: uppercase;
+        padding: 5px;
+    }
+    form{
+        margin: 50px;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+}
+footer{
+    @include sizes(320px, 100%, auto);
+    background-color: $color4;
+    display: inline-block;
+    font-family: $font1;
+
+    .redes{
+        size: 60px;
+        margin-top: 10px;
+        font-family: $font1;
+        color: $color5;
+        background-color: $color4;
+        padding-left: 15px;
+
+        a{
+            text-decoration: none;
+            color: $color5;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            margin: 5px;
+            size: 100px;
+            background-color: $color4;
+        }
+
+        i{
+            size: 80px;
+            margin-top: 5px;
+            background-color: $color4;
+        }
+
+        p{
+            margin:0;
+            font-size:  15px;
+            margin-left: 10px;
+            background-color: $color4;
+        }
+    }
+    .copy{
+        text-align: left;
+        color: $color5;
+        font-family: $font1;
+        font-size: small;
+        margin-left: 20px;
+        background-color: $color4;
+    }
+}
+.subir{
+    height: 40px;
+    width: 40px;
+    background-color:$color3;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px $color1;
+
+    i{
+        color: $color5;
+        background-color: $color3;
+    }
+}
+@media only screen and (min-width: 500px){
+    .conteiner{
+        @include sizes(500px, 100%, auto);
+    }
+    header{
+        @include sizes(320px, 100%, 145px);
+        
+        .envios{
+            @include sizes(320px, 100%, 20px);
+
+            p{
+                font-size: 15px;
+            }
+        }
+        .nav-1{
+            @include sizes(400px ,100% , 30px);
+
+            li{
+                a{ 
+                    font-size: 16px;
+                    margin: 10px; 
+                    border-left: 5px;
+                }
+            }
+        }
+        .logo{
+            font-size: 55px;
+        }
+        .nav-2{
+            @include sizes(500px, 100%, auto);
+
+            li{
+                a{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    aside{
+        @include sizes(500px, 100%, auto);
+        
+        h2{
+            font-size: 30px;
+            padding-left: 10px;
+        }
+        p{
+            padding: 10px;
+        }
+    }
+    .productospag{
+        grid-template-columns: 35% 65%;
+
+        .asideproductos{
+            @include sizes(80px, 100%, auto);
+            li{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 600px) {
+    .conteiner{
+        @include sizes(600px, 100%, auto);
+    }
+    header{
+        @include sizes(600px, 100%, 145px);
+        
+        .envios{
+            @include sizes(320px, 100%, 20px);
+
+            p{
+                font-size: 15px;
+            }
+        }
+        .nav-1{
+            @include sizes(400px ,100% , 30px);
+            li{
+                a{ 
+                    font-size: 16px;
+                    margin: 10px; 
+                    border-left: 5px;
+                }
+            }
+        }
+        .logo{
+            font-size: 55px;
+        }
+        .nav-2{
+            @include sizes(500px, 100%, auto);
+
+            li{
+                a{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    aside{
+        @include sizes(500px, 100%, auto);
+        
+        h2{
+            font-size: 30px;
+            padding-left: 10px;
+        }
+        p{
+            padding: 10px;
+        }
+    }
+    .productospag{
+        grid-template-columns: 35% 65%;
+
+        .asideproductos{
+            @include sizes(80px, 100%, auto);
+            section{
+            h2{
+                font-size: 25px;
+                }
+            }
+            li{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+        .galeriasw{
+            .card{
+                font-size: 20px;
+                .card-body{
+                    .card-title{
+                        font-size:30px;
+                    }
+                }
+            }
+        }
+    }
+    .mainregistrarse{
+        @include sizes (600px, 100%, auto);
+        h2{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 25px;
+        }
+    }
+    .comunidad{
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+}
+@media only screen and (min-width: 740px) {
+    .conteiner{
+        @include sizes(740px, 100%, auto);
+    }
+    header{
+        @include sizes(740px, 100%, 155px);
+        
+        .envios{
+            @include sizes(740px, 100%, 20px);
+
+            p{
+                font-size: 15px;
+                word-spacing: 2px;
+            }
+        }
+        .nav-1{
+            @include sizes(740px ,100% , 30px);
+            li{
+                a{ 
+                    font-size: 22px;
+                    margin: 10px; 
+                    border-left: 5px;
+                }
+            }
+        }
+        .logo{
+            font-size: 65px;
+        }
+        .nav-2{
+            @include sizes(740px, 100%, auto);
+            li{
+                a{
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    aside{
+        @include sizes(740px, 100%, auto);
+        
+        h2{
+            font-size: 40px;
+            padding-left: 10px;
+        }
+        p{
+            padding: 10px;
+            font-size: 18px;
+        }
+    }
+    .caja{
+        a{
+            font-size: 25px;
+        }
+    }
+    .productospag{
+        grid-template-columns: 30% 70%;
+
+        .asideproductos{
+            @include sizes(180px, 100%, auto);
+            section{
+            h2{
+                font-size: 30px;
+                }
+            }
+            li{
+                a{
+                    font-size: 25px;
+                }
+            }
+            span{
+                size:10px;
+                font-size: 15px;
+
+            }
+        }
+        .cuerpoprod{
+            @include sizes(500px, 100%, auto);
+            .tituloswim{
+                font-size: 35px;
+            }
+            .galeriasw{
+                display:grid;
+                grid-template-columns: 50% 50%;
+                column-gap: 20px;
+                .card{
+                    font-size: 20px;
+                    width: 250px;
+                    .card-body{
+                        .card-title{
+                            font-size:30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mainregistrarse{
+        @include sizes (600px, 100%, auto);
+        h2{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 25px;
+        }
+    }
+    .comunidad{
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    .tabladetalles{
+        @include sizes(740px,100% ,auto );
+        font-family: $font1;
+        padding: 5px;
+    
+        .tablatalles{
+            padding: 5px;
+    
+            h2{
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            h3{
+                text-transform:capitalize;
+                font-size: 25px;
+            }
+            .table{
+                @include sizes(290px,100%,auto);
+                margin-right: 10px;
+                th{
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+                td{
+                    font-size: 15px;
+                }
+                .zona{
+                    text-transform:capitalize;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    footer{
+    @include sizes(740px, 100%, auto);
+    background-color: $color4;
+    display: inline-block;
+    font-family: $font1;
+
+        .redes{
+            size: 80px;
+            margin-top: 10px;
+            font-family: $font1;
+            color: $color5;
+            background-color: $color4;
+            padding-left: 15px;
+
+            i{
+                size: 100px;
+                margin-top: 5px;
+                background-color: $color4;
+            }
+
+            p{
+                margin:0;
+                font-size:  20px;
+                margin-left: 10px;
+                background-color: $color4;
+            }
+        }
+        .copy{
+            text-align: left;
+            color: $color5;
+            font-family: $font1;
+            font-size: medium;
+            margin-left: 20px;
+            background-color: $color4;
+        }
+    }
+}
+@media only screen and (min-width: 900px) {
+    .conteiner{
+        @include sizes(740px, 100%, auto);
+    }
+    header{
+        @include sizes(740px, 100%, 155px);
+        
+        .envios{
+            @include sizes(740px, 100%, 20px);
+
+            p{
+                font-size: 15px;
+                word-spacing: 2px;
+            }
+        }
+        .nav-1{
+            @include sizes(900px ,100% , 30px);
+            li{
+                a{ 
+                    font-size: 22px;
+                    margin: 10px; 
+                    border-left: 5px;
+                }
+            }
+        }
+        .logo{
+            font-size: 65px;
+        }
+        .nav-2{
+            @include sizes(900px, 100%, auto);
+            li{
+                a{
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    aside{
+        @include sizes(740px, 100%, auto);
+        
+        h2{
+            font-size: 40px;
+            padding-left: 10px;
+        }
+        p{
+            padding: 10px;
+            font-size: 18px;
+        }
+    }
+    .caja{
+        a{
+            font-size: 25px;
+        }
+    }
+    .productospag{
+        grid-template-columns: 30% 70%;
+
+        .asideproductos{
+            @include sizes(180px, 100%, auto);
+            section{
+            h2{
+                font-size: 30px;
+                }
+            }
+            li{
+                a{
+                    font-size: 25px;
+                }
+            }
+            span{
+                size:10px;
+                font-size: 15px;
+
+            }
+        }
+        .cuerpoprod{
+            @include sizes(600px, 100%, auto);
+            .tituloswim{
+                font-size: 35px;
+            }
+            .galeriasw{
+                display:grid;
+                grid-template-columns: 50% 50%;
+                column-gap: 20px;
+                .card{
+                    font-size: 20px;
+                    min-width: 300px;
+                    width: 100%;
+                    .card-body{
+                        .card-title{
+                            font-size:30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mainregistrarse{
+        @include sizes (600px, 100%, auto);
+        h2{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 25px;
+        }
+    }
+    .comunidad{
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    .tabladetalles{
+        @include sizes(900px,100% ,auto );
+        font-family: $font1;
+        padding: 10px;
+    
+        .tablatalles{
+            padding: 25px;
+    
+            h2{
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            h3{
+                text-transform:capitalize;
+                font-size: 25px;
+            }
+            .table{
+                @include sizes(290px,100%,auto);
+                margin-right: 10px;
+                th{
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+                td{
+                    font-size: 15px;
+                }
+                .zona{
+                    text-transform:capitalize;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    footer{
+    @include sizes(740px, 100%, auto);
+    background-color: $color4;
+    display: inline-block;
+    font-family: $font1;
+
+        .redes{
+            size: 80px;
+            margin-top: 10px;
+            font-family: $font1;
+            color: $color5;
+            background-color: $color4;
+            padding-left: 15px;
+
+            i{
+                size: 100px;
+                margin-top: 5px;
+                background-color: $color4;
+            }
+
+            p{
+                margin:0;
+                font-size:  20px;
+                margin-left: 10px;
+                background-color: $color4;
+            }
+        }
+        .copy{
+            text-align: left;
+            color: $color5;
+            font-family: $font1;
+            font-size: medium;
+            margin-left: 20px;
+            background-color: $color4;
+        }
+    }
+}
+@media only screen and (min-width: 900px) {
+    .conteiner{
+        @include sizes(740px, 100%, auto);
+    }
+    header{
+        @include sizes(740px, 100%, 155px);
+        
+        .envios{
+            @include sizes(740px, 100%, 20px);
+
+            p{
+                font-size: 15px;
+                word-spacing: 2px;
+            }
+        }
+        .nav-1{
+            @include sizes(900px ,100% , 30px);
+            li{
+                a{ 
+                    font-size: 22px;
+                    margin: 10px; 
+                    border-left: 5px;
+                }
+            }
+        }
+        .logo{
+            font-size: 65px;
+        }
+        .nav-2{
+            @include sizes(900px, 100%, auto);
+            li{
+                a{
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    .main{
+        @include sizes(900px, 100%, auto);
+        max-height: 600px;
+    
+        .rowmain{
+            @include sizes(900px, 100%, auto);
+            max-height: 600px;
+            padding-left: 70px;
+            padding-right: 70px;
+        
+            .carousel-inner img{
+                max-height: 320px;
+                min-width: 320px;
+                width: 100%;
+                text-align: center;
+            }
+        }   
+    }
+    aside{
+        @include sizes(740px, 100%, auto);
+        
+        h2{
+            font-size: 40px;
+            padding-left: 10px;
+        }
+        p{
+            padding: 10px;
+            font-size: 18px;
+        }
+    }
+    .caja{
+        a{
+            font-size: 25px;
+        }
+    }
+    .productospag{
+        grid-template-columns: 30% 70%;
+
+        .asideproductos{
+            @include sizes(180px, 100%, auto);
+            section{
+            h2{
+                font-size: 30px;
+                }
+            }
+            li{
+                a{
+                    font-size: 25px;
+                }
+            }
+            span{
+                size:10px;
+                font-size: 15px;
+            }
+        }
+        .cuerpoprod{
+            @include sizes(780px, 100%, auto);
+            .tituloswim{
+                font-size: 35px;
+            }
+            .galeriasw{
+                display:grid;
+                grid-template-columns: 30% 30% 30%;
+                column-gap: 25px;
+                .card{
+                    font-size: 20px;
+                    min-width: 220px;
+                    width: 100%;
+                    .card-body{
+                        .card-title{
+                            font-size:30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mainregistrarse{
+        @include sizes (600px, 100%, auto);
+        h2{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 25px;
+        }
+    }
+    .comunidad{
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    .tabladetalles{
+        @include sizes(900px,100% ,auto );
+        font-family: $font1;
+        padding: 10px;
+    
+        .tablatalles{
+            padding: 25px;
+    
+            h2{
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            h3{
+                text-transform:capitalize;
+                font-size: 25px;
+            }
+            .table{
+                @include sizes(290px,100%,auto);
+                margin-right: 10px;
+                th{
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+                td{
+                    font-size: 15px;
+                }
+                .zona{
+                    text-transform:capitalize;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    footer{
+    @include sizes(740px, 100%, auto);
+    background-color: $color4;
+    display: inline-block;
+    font-family: $font1;
+
+        .redes{
+            size: 80px;
+            margin-top: 10px;
+            font-family: $font1;
+            color: $color5;
+            background-color: $color4;
+            padding-left: 15px;
+
+            i{
+                size: 100px;
+                margin-top: 5px;
+                background-color: $color4;
+            }
+
+            p{
+                margin:0;
+                font-size:  20px;
+                margin-left: 10px;
+                background-color: $color4;
+            }
+        }
+        .copy{
+            text-align: left;
+            color: $color5;
+            font-family: $font1;
+            font-size: medium;
+            margin-left: 20px;
+            background-color: $color4;
+        }
+    }
+}
+@media only screen and (min-width: 1100px){ 
+.main{
+    @include sizes(900px, 100%, auto);
+    max-height: 600px;
+
+    .rowmain{
+        @include sizes(900px, 100%, auto);
+        max-height: 600px;
+        padding-left: 140px;
+        padding-right: 140px;
+        }   
+    }
+    aside{
+        @include sizes(900px, 100%, auto);
+        
+        h2{
+            font-size: 40px;
+            padding-left: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        p{
+            padding: 10px;
+            font-size: 18px;
+            padding-left: 45px;
+            padding-right: 55px;
+        }
+    }
+    .caja{
+        height: 1000px;
+        width: 1250px;
+        padding-left: 115px;
+        a{
+            font-size: 25px;
+        }
+    }
+}
