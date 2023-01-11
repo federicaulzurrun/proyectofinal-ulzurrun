@@ -1,4 +1,4 @@
- //Declaracion de clase
+//Declaracion de clase
 class Producto {
     constructor ( id, nombre, precio, img){
     this.id = id;
@@ -8,6 +8,7 @@ class Producto {
     this.cantidad = 1;
     }
 }
+
 //Declaracion de Productos a traves de la Clase
 const bikiniPalm = new Producto (01, "Biniki Palm",4400, "../assets/imagenes/bikinipalm.jpg");
 const bikiniShell = new Producto (02, "Bikini Shell", 4400, "../assets/imagenes/bikinishell.jpg");
@@ -43,7 +44,30 @@ if(localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
 }
 //funcion que muestra productos
+
 const contenedorProductos = document.getElementById("contenedorProductos");
+/*const listadoProductos = "../json/productos.json";
+
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach(producto => {
+            contenedorProductos.innerHTML += `
+                <div class ="card" style="min-width: 80px max-width: 100px">
+                    <img src= "${producto.img}" class ="card-img-top"  alt =" ${producto.nombre}">
+                    <div class="card-body">
+                        <h4 class="card-title"> ${producto.nombre}</h4>
+                        <h5 class="card-text">$ ${producto.precio}</h5>
+                        <button class= "btn colorBoton" id = "boton${producto.id}" >Agregar al carrito </button>        
+                    </div>
+                </div>`
+            const boton = document.getElementById(`boton${producto.id}`);
+            boton.addEventListener("click", () => {
+                agregarAlCarrito(producto.id)
+            });
+        })
+    })
+    .catch(error => console.log(error));*/
 
 const mostrarProductos = () => {
     productos.forEach( producto => {
@@ -76,83 +100,27 @@ const agregarAlCarrito = (id) => {
         carrito.push(producto);
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
-    
-    calcularTotal();
+    Swal.fire({
+        title: 'Producto ha sido agregado con exito!',
+        icon: 'success',
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Continuar!'
+    })
 }
 
 mostrarProductos();
 
-const contenedorCarrito = document.getElementById("contenedorCarrito");
+const redesSociales = document.getElementById("redesSociales");
+const redSocial = "../json/redesSociales.json"
 
-const verCarrito = document.getElementById("verCarrito");
-
-verCarrito.addEventListener("click", () => {
-    mostrarCarrito();
-});
-
-const mostrarCarrito = () => {
-
-    contenedorCarrito.innerHTML = "";
-
-    carrito.forEach(producto => {
-        const card = document.createElement("div");
-        card.classList.add("col-xl-3", "col-md-4", "col-sm-6", "col-6");
-        card.innerHTML = `
-                            <div class ="card" style="min-width: 80px width:auto ">
-                            <img src= "${producto.img}" class ="card-img-top"  alt =" ${producto.nombre}">
-                                <div class="card-body">
-                                    <h4 class="card-title "> ${producto.nombre} (${producto.cantidad})</h4>
-                                    <h5 class="card-text">$ ${producto.precio}</h5>
-                                    <button type="button" class="btn btn-success" id= "sumar${producto.id}"> + </button>
-                                    <button type="button" class="btn btn-danger" id= "eliminar${producto.id}" > - </button>        
-                                </div>
-                            </div>`
-
-        contenedorCarrito.appendChild(card);
-
-        const btn = document.getElementById(`sumar${producto.id}`);
-        btn.addEventListener("click", () => {
-            agregarAlCarrito(producto.id);
-        });
-
-        const boton = document.getElementById(`eliminar${producto.id}`);
-        boton.addEventListener("click", () => {
-            eliminarDelCarrito(producto.id);
-        });
-    });
-    calcularTotal();
-}
-
-const eliminarDelCarrito = (id) => {
-    const producto = carrito.find( producto => producto.id === id);
-    const indice = carrito.indexOf(producto);
-    carrito.splice(indice, 1);
-
-    mostrarCarrito();
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-//vaciar carrito
-const vaciarCarrito = document.getElementById("vaciarTodoElCarrito");
-vaciarCarrito.addEventListener("click", () => {
-    eliminarTodoElCarrito();
-});
-const eliminarTodoElCarrito = () => {
-    carrito = [];
-    mostrarCarrito();
-
-    localStorage.clear();
-};
-
-//total compra
-
-const total = document.getElementById("total");
-
-const calcularTotal = () => {
-    let totalCompra = 0;
-    carrito.forEach(producto => {
-        totalCompra += producto.precio * producto.cantidad;
-    });
-    total.innerHTML = `$${totalCompra}`;
-}
+fetch(redSocial)
+.then(respuesta => respuesta.json())
+.then(datos =>{
+    datos.forEach(red => {
+        redesSociales.innerHTML += `
+        <a href="${red.link}"><i class="${red.logo}" target="_blank"></i><p>Zöld wear</p></a>
+        `
+    })
+})

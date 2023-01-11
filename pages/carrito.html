@@ -36,17 +36,16 @@
         <div class="productoscarrito">
             <h1>Tu carrito de compras</h1>
             <hr>
-            <div id="contenedorProductos" class="row"></div>
-            <h2>Tus productos seleccionados</h2>
+            <div id="contenedorCarrito" class="row"><span id="verCarrito"></span></div>
             <h3>Total: <span id="total"> </span> </h3>
-            <button class="btn colorBoton" id="verCarrito">Ver Carrito</button>
+            <button class="btn colorBoton" id="continuarCompra" >Continuar Compra</button>
             <button class="btn colorBoton" id="vaciarTodoElCarrito">Vaciar Carrito</button> 
             <br>
-            <div id="contenedorCarrito" class="row"></div>
             </div>    
         <footer>
             <nav>
                 <div class="redes">
+                    <div id="redesSociales"></div>
                     <a href="https://m.facebook.com/Z%C3%B6ld-wear-109315184758136/"><i class="fa-brands fa-facebook" target="_blank"></i><p>Zöld wear</p></a>
                     <a href="https://instagram.com/zold.wear?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram" target="_blank"></i><p>Zold.wear</p></a>
                     <a href="mailto:fzulzurrun@gmail.com" target="_blank"><i class="fa-solid fa-envelope" target="_blank"></i><p>Zöld</p></a>
@@ -58,6 +57,7 @@
     </div>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="../javascript/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../javascript/carritojs.js"></script>
 </body>
 </html>
